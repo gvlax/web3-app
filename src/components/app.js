@@ -12,7 +12,7 @@ class App extends React.Component {
         const authData = { data: "Auth on my site"};
         if (WavesKeeper) {
             WavesKeeper.auth(authData).then(auth => {
-                console.log(auth);
+                console.log(JSON.stringify(auth));
             }).catch(error => {
                 console.error(error);
             });
