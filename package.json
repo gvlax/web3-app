@@ -17,9 +17,9 @@
   "author": "Maciej Gulak",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
     "babel": "^6.23.0",
     "babel-core": "^6.26.3",
+    "express": "^4.17.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
