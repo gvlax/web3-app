@@ -34,11 +34,14 @@ class App extends React.Component {
     }
   }
 
+  getUserAddress = () => this.state.userData ? this.state.userData.address : '<user not authorisated>';
+
   authWithSigner = async () => {
     console.log('authUser() called ....')
     try {
       const userData = await this.wavesSigner.login()
       console.log('User data: ', userData)
+      this.setState({userData});
     } catch (err) {
       console.error('login rejected')
     }
@@ -47,6 +50,7 @@ class App extends React.Component {
   render() {
     return (
         <>
+            <p>Address: {this.getUserAddress()}</p>
             <button
               className="btn btn-default"
               type="submit"
